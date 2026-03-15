@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/vivenza-2/">
       <ScrollToTop />
       <CustomCursor />
       <Navbar />
