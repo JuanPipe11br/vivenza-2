@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/vivenza-2/">
+    <HashRouter>
       <ScrollToTop />
       <CustomCursor />
       <Navbar />
@@ -57,7 +57,7 @@ function App() {
         <Route path="/collections" element={<Collections />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
