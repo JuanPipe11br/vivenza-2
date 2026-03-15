@@ -1,0 +1,129 @@
+/* Hero */
+.collections-hero {
+  padding-top: calc(var(--space-24) + 4rem);
+  padding-bottom: var(--space-16);
+  background: var(--surface-container-low);
+  text-align: center;
+}
+
+.collections-hero .label-md {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.collections-hero .display-lg {
+  margin-bottom: 1.5rem;
+}
+
+.collections-hero__subtitle {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.collections-hero__quote {
+  font-style: italic;
+  color: var(--on-surface-variant);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Collection Rows */
+.collection-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  margin-bottom: var(--space-24);
+}
+
+.collection-row--reverse {
+  direction: rtl;
+}
+
+.collection-row--reverse > * {
+  direction: ltr;
+}
+
+.collection-row__image {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.collection-row__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.collection-row:hover .collection-row__image img {
+  transform: scale(1.03);
+}
+
+.collection-row__content .label-sm {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.collection-row__content .headline-lg {
+  margin-bottom: 1.25rem;
+}
+
+/* Featured */
+.collections-featured {
+  background: var(--surface-container-low);
+  padding: var(--space-24) 0;
+}
+
+.collections-featured__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.collections-featured__header .label-md {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--outline);
+}
+
+.collections-featured__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.collections-product__image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background: var(--surface-container);
+}
+
+.collections-product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.collections-product:hover .collections-product__image img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .collection-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .collection-row--reverse {
+    direction: ltr;
+  }
+
+  .collections-featured__grid {
+    grid-template-columns: 1fr;
+  }
+}

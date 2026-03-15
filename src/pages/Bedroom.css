@@ -1,0 +1,70 @@
+.bedroom-philosophy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.bedroom-philosophy__content .label-md {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.bedroom-philosophy__content .headline-lg {
+  margin-bottom: 1.5rem;
+}
+
+.bedroom-philosophy__quote {
+  background: var(--surface-container-low);
+  padding: var(--space-12);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Products */
+.bedroom-products {
+  background: var(--surface-container-low);
+}
+
+.bedroom-products__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.bedroom-products__header .label-md {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--outline);
+}
+
+.bedroom-products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.bedroom-products__grid > :nth-child(4),
+.bedroom-products__grid > :nth-child(5) {
+  grid-column: span 1;
+}
+
+@media (max-width: 1024px) {
+  .bedroom-philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .bedroom-products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bedroom-products__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,35 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s;
+  margin-top: -6px;
+  margin-left: -6px;
+  will-change: transform;
+}
+
+.custom-cursor--hover {
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  margin-left: -24px;
+  background-color: var(--outline-variant);
+  opacity: 0.5;
+}
+
+.custom-cursor--hidden {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}

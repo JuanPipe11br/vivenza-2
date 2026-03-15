@@ -1,0 +1,106 @@
+/* Materials */
+.dining-materials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.dining-materials__content .label-md {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.dining-materials__content .headline-lg {
+  margin-bottom: 1.5rem;
+}
+
+.dining-materials__image {
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.dining-materials__image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.dining-materials__caption {
+  background: var(--surface-container-low);
+  padding: var(--space-5);
+}
+
+.dining-materials__caption .label-lg {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Products */
+.dining-products {
+  background: var(--surface-container-low);
+}
+
+.dining-products__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.dining-products__header .label-md {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--outline);
+}
+
+.dining-products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* Features */
+.dining-features {
+  padding: var(--space-24) 0;
+  text-align: center;
+}
+
+.dining-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.feature-card {
+  background: var(--surface-container-lowest);
+  padding: var(--space-10) var(--space-6);
+  border-radius: 0.25rem;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-card__icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--tertiary-container);
+}
+
+.feature-card .title-md {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .dining-materials__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .dining-products__grid,
+  .dining-features__grid {
+    grid-template-columns: 1fr;
+  }
+}

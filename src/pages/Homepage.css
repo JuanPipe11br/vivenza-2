@@ -1,0 +1,170 @@
+/* ==============================
+   HOMEPAGE
+   ============================== */
+
+/* Categories */
+.categories__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.categories__header .label-md {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.categories__header .headline-lg {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.category-card {
+  display: block;
+  text-decoration: none;
+}
+
+.category-card__image-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  margin-bottom: var(--space-5);
+  background: var(--surface-container-low);
+}
+
+.category-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card:hover .category-card__image-wrap img {
+  transform: scale(1.05);
+}
+
+.category-card .headline-md {
+  margin-bottom: 0.5rem;
+}
+
+/* Craftsmanship */
+.craftsmanship {
+  background: var(--surface-container-low);
+  padding: var(--space-24) 0;
+}
+
+.craftsmanship__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.craftsmanship__image {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.craftsmanship__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.craftsmanship__content .label-md {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--outline);
+}
+
+.craftsmanship__content .headline-lg {
+  margin-bottom: 1.5rem;
+}
+
+.craftsmanship__content .body-lg {
+  margin-bottom: 2.5rem;
+}
+
+.craftsmanship__stats {
+  display: flex;
+  gap: var(--space-10);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat__value {
+  font-family: var(--font-headline);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+/* New Arrivals */
+.new-arrivals__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.new-arrivals__header .label-md {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--outline);
+}
+
+.new-arrivals__header .headline-lg {
+  margin-bottom: 1rem;
+}
+
+.new-arrivals__header .body-lg {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.new-arrivals__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .categories__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .category-card__image-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .craftsmanship__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .new-arrivals__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .new-arrivals__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .craftsmanship__stats {
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+}
