@@ -16,7 +16,7 @@ const COLLECTIONS = [
   {
     title: 'Línea Brutalista',
     desc: 'Materiales honestos y texturas crudas. Concreto fundido se encuentra con acero forjado a mano en una colección que redefine el lujo industrial para el hogar contemporáneo.',
-    image: 'https://images.unsplash.com/photo-1487958449943?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80',
   },
 ];
 

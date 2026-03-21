@@ -96,7 +96,7 @@ const ALL_PRODUCTS = [
     material: 'Latón macizo cepillado a mano',
     price: '$890',
     category: 'bedroom',
-    image: 'https://images.unsplash.com/photo-1583847268964?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     description: 'La Lámpara Lumière captura la esencia de la hora dorada. Su diseño de latón macizo y pantalla de lino orgánico proyecta una luz cálida y acogedora, perfecta para crear ambientes íntimos.',
     details: [
       'Estructura de latón macizo con acabado satinado',
@@ -246,7 +246,7 @@ const ALL_PRODUCTS = [
     material: 'Lighting',
     price: '$420',
     category: 'new-arrivals',
-    image: 'https://images.unsplash.com/photo-1583847268964?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
     description: 'Lámpara de pie con diseño minimalista que aporta iluminación ambiental cálida a cualquier espacio.',
     details: [
       'Estructura de metal con acabado negro mate',
