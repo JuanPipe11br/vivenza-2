@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ProductCard from '../components/ProductCard';
 import './ProductDetail.css';

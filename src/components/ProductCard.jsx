@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './ProductCard.css';
 
 export default function ProductCard({ image, title, material, price, badge, linkTo }) {
