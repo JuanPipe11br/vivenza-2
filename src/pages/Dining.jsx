@@ -1,40 +1,26 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ProductCard from '../components/ProductCard';
+import { ALL_PRODUCTS } from './ProductDetail';
 import './Dining.css';
 
-const PRODUCTS = [
-  {
-    title: 'Aurelius Heritage Oak Table',
-    material: 'Solid European Oak, Hand-rubbed Oil Finish',
-    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80',
-  },
-  {
-    title: 'Vela Sculptural Chair',
-    material: 'Saddle Leather & Black Ash',
-    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&q=80',
-  },
-  {
-    title: 'Palladio Stone Sideboard',
-    material: 'Carrara Marble & Smoked Oak',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
-  },
-];
+const PRODUCTS = ALL_PRODUCTS.filter(p => p.category === 'dining');
 
 const FEATURES = [
   {
-    title: 'Architectural Balance',
-    desc: 'Proportions calculated to facilitate conversation and movement.',
+    title: 'Balance Arquitectónico',
+    desc: 'Proporciones calculadas para facilitar la conversación y el movimiento.',
     icon: '◇',
   },
   {
-    title: 'Conscious Luxury',
-    desc: 'FSC-certified timbers and low-impact traditional tanning processes.',
+    title: 'Lujo Consciente',
+    desc: 'Maderas certificadas FSC y procesos tradicionales de curtido de bajo impacto.',
     icon: '✦',
   },
   {
-    title: 'Bespoke Finish',
-    desc: 'Available in custom dimensions to suit your specific interior landscape.',
+    title: 'Acabado Personalizado',
+    desc: 'Disponible en dimensiones personalizadas para adaptarlo a tu espacio interior.',
     icon: '▣',
   },
 ];
@@ -44,9 +30,9 @@ export default function Dining() {
     <main>
       <HeroSection
         image="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?w=1600&q=80"
-        title="The Art of Gathering"
-        subtitle="Sculpted from Italian marble and heritage oak. Discover dining pieces that transform every meal into a curated experience."
-        ctaText="Explore Collection"
+        title="El Arte de Reunirse"
+        subtitle="Esculpido en mármol italiano y roble heritage. Descubre piezas que transforman cada comida en una experiencia curada."
+        ctaText="Explorar Colección"
         ctaLink="/collections"
       />
 
@@ -61,16 +47,16 @@ export default function Dining() {
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="label-md">Creative Process</span>
-              <h2 className="headline-lg">Mastering Earth & Form</h2>
+              <span className="label-md">Proceso Creativo</span>
+              <h2 className="headline-lg">Dominando la Tierra y la Forma</h2>
               <p className="body-lg">
-                Our dining collection is a dialogue between the organic and the architectural.
-                We select materials—solid walnut, Honed Travertine, and full-grain leathers—that
-                age with character, telling the story of your home.
+                Nuestra colección de comedor es un diálogo entre lo orgánico y lo arquitectónico.
+                Seleccionamos materiales—nogal macizo, Travertino honed, y cueros de grano completo—que
+                envejecen con carácter, contando la historia de tu hogar.
               </p>
               <p className="body-md" style={{ marginTop: '1.5rem' }}>
-                Every piece is finished by hand, ensuring that the tactile experience of a
-                Vivenza table is as profound as its visual silhouette.
+                Cada pieza es acabada a mano, asegurando que la experiencia táctil de una mesa
+                Vivenza sea tan profunda como su silueta visual.
               </p>
             </motion.div>
             <motion.div
@@ -82,13 +68,13 @@ export default function Dining() {
             >
               <img
                 src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80"
-                alt="Italian Travertine"
+                alt="Travertino Italiano"
                 loading="lazy"
               />
               <div className="dining-materials__caption">
-                <h4 className="label-lg">Italian Travertine</h4>
+                <h4 className="label-lg">Travertino Italiano</h4>
                 <p className="body-md">
-                  Porous and timeless, our stone is sourced from the same quarries as the Colosseum.
+                  Poroso y atemporal, nuestra piedra proviene de las mismas canteras que el Coliseo.
                 </p>
               </div>
             </motion.div>
@@ -106,12 +92,12 @@ export default function Dining() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="label-md">The Selection</span>
-            <h2 className="headline-lg">Dining Foundations</h2>
+            <span className="label-md">La Selección</span>
+            <h2 className="headline-lg">Fundamentos para el Comedor</h2>
           </motion.div>
           <div className="dining-products__grid">
             {PRODUCTS.map((p) => (
-              <ProductCard key={p.title} {...p} />
+              <ProductCard key={p.id} {...p} linkTo={`/product/${p.id}`} />
             ))}
           </div>
         </div>
@@ -128,7 +114,7 @@ export default function Dining() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            Elegance is an Echo of Quality
+            La Elegancia es un Eco de la Calidad
           </motion.h2>
           <div className="dining-features__grid">
             {FEATURES.map((f, i) => (

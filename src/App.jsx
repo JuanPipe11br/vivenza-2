@@ -1,14 +1,16 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import Homepage from './pages/Homepage';
-import LivingRoom from './pages/LivingRoom';
-import Bedroom from './pages/Bedroom';
-import Dining from './pages/Dining';
-import Collections from './pages/Collections';
+
+const Homepage = lazy(() => import('./pages/Homepage'));
+const LivingRoom = lazy(() => import('./pages/LivingRoom'));
+const Bedroom = lazy(() => import('./pages/Bedroom'));
+const Dining = lazy(() => import('./pages/Dining'));
+const Collections = lazy(() => import('./pages/Collections'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -16,6 +18,15 @@ function ScrollToTop() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
+}
+
+function LoadingFallback() {
+  return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ width: '40px', height: '40px', border: '2px solid var(--surface-container)', borderTopColor: 'var(--primary)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+    </div>
+  );
 }
 
 function App() {
@@ -49,13 +60,16 @@ function App() {
       <ScrollToTop />
       <CustomCursor />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/living-room" element={<LivingRoom />} />
-        <Route path="/bedroom" element={<Bedroom />} />
-        <Route path="/dining" element={<Dining />} />
-        <Route path="/collections" element={<Collections />} />
-      </Routes>
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/living-room" element={<LivingRoom />} />
+          <Route path="/bedroom" element={<Bedroom />} />
+          <Route path="/dining" element={<Dining />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </HashRouter>
   );

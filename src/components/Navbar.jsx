@@ -18,10 +18,10 @@ export default function Navbar() {
   }, [location]);
 
   const navLinks = [
-    { to: '/living-room', label: 'Living Room' },
-    { to: '/bedroom', label: 'Bedroom' },
-    { to: '/dining', label: 'Dining' },
-    { to: '/collections', label: 'Collections' },
+    { to: '/living-room', label: 'Salas' },
+    { to: '/bedroom', label: 'Dormitorios' },
+    { to: '/dining', label: 'Comedores' },
+    { to: '/collections', label: 'Colecciones' },
   ];
 
   return (

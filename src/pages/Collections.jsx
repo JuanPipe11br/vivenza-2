@@ -4,33 +4,33 @@ import './Collections.css';
 
 const COLLECTIONS = [
   {
-    title: 'The Italian Collection',
-    desc: 'Inspired by the grand palazzos of Northern Italy, this line emphasizes sculptural forms and rare marbles. It is a collection for those who view their home as a living gallery.',
+    title: 'Colección Italiana',
+    desc: 'Inspirada en los grandes palacios del norte de Italia, esta línea enfatiza formas escultóricas y mármoles raros. Es una colección para quienes ven su hogar como una galería viva.',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
   },
   {
-    title: 'Minimalist Zen',
-    desc: 'The beauty of subtraction. Using light-toned ash and textured linens, this collection fosters a sanctuary of calm. Where every line serves a purpose and every shadow adds depth.',
+    title: 'Minimalismo Zen',
+    desc: 'La belleza de la resta. Usando ceniza de tono claro y linos texturizados, esta colección fomenta un santuario de calma. Donde cada línea sirve a un propósito y cada sombra añade profundidad.',
     image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
   },
   {
-    title: 'The Brutalist Line',
-    desc: 'Honest materials and raw textures. Cast concrete meets hand-forged steel in a collection that redefines industrial luxury for the contemporary home.',
+    title: 'Línea Brutalista',
+    desc: 'Materiales honestos y texturas crudas. Concreto fundido se encuentra con acero forjado a mano en una colección que redefine el lujo industrial para el hogar contemporáneo.',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
   },
 ];
 
 const BRUTALIST_PRODUCTS = [
   {
-    title: 'Foundry Table',
+    title: 'Mesa Foundry',
     image: 'https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=600&q=80',
   },
   {
-    title: 'Obelisk Lounge',
+    title: 'Lounge Obelisk',
     image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80',
   },
   {
-    title: 'Apex Chandelier',
+    title: 'Lámpara Apex',
     image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80',
   },
 ];
@@ -47,7 +47,7 @@ export default function Collections() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Our Design Lines
+            Nuestras Líneas de Diseño
           </motion.span>
           <motion.h1
             className="display-lg"
@@ -55,7 +55,7 @@ export default function Collections() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            Curated Collections
+            Colecciones Curadas
           </motion.h1>
           <motion.p
             className="body-lg collections-hero__subtitle"
@@ -63,8 +63,8 @@ export default function Collections() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Explore our meticulously crafted design lines, where architectural precision meets
-            the warmth of natural materials. Each piece is a testament to the art of fine living.
+            Explora nuestras líneas de diseño meticulosamente elaboradas, donde la precisión arquitectónica se encuentra
+            con la calidez de los materiales naturales. Cada pieza es un testimonio del arte de vivir bien.
           </motion.p>
           <motion.blockquote
             className="collections-hero__quote headline-md"
@@ -72,7 +72,7 @@ export default function Collections() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.8 }}
           >
-            "A celebration of classical proportions and modernist soul."
+            "Una celebración de proporciones clásicas y alma modernista."
           </motion.blockquote>
         </div>
       </section>
@@ -93,11 +93,11 @@ export default function Collections() {
                 <img src={col.image} alt={col.title} loading="lazy" />
               </div>
               <div className="collection-row__content">
-                <span className="label-sm">Collection {String(i + 1).padStart(2, '0')}</span>
+                <span className="label-sm">Colección {String(i + 1).padStart(2, '0')}</span>
                 <h2 className="headline-lg">{col.title}</h2>
                 <p className="body-lg">{col.desc}</p>
-                <Link to="#" className="btn-text" style={{ marginTop: '1.5rem' }}>
-                  Explore Collection
+                <Link to="/living-room" className="btn-text" style={{ marginTop: '1.5rem' }}>
+                  Explorar Colección
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </Link>
               </div>
@@ -116,8 +116,8 @@ export default function Collections() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="label-md">From the Brutalist Line</span>
-            <h2 className="headline-lg">Signature Pieces</h2>
+            <span className="label-md">De la Línea Brutalista</span>
+            <h2 className="headline-lg">Piezas Firmantes</h2>
           </motion.div>
           <div className="collections-featured__grid">
             {BRUTALIST_PRODUCTS.map((p, i) => (

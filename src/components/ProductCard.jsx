@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
-export default function ProductCard({ image, title, material, price, badge }) {
-  return (
+export default function ProductCard({ image, title, material, price, badge, linkTo }) {
+  const content = (
     <motion.div
       className="product-card"
       initial={{ opacity: 0, y: 20 }}
@@ -21,4 +22,6 @@ export default function ProductCard({ image, title, material, price, badge }) {
       </div>
     </motion.div>
   );
+
+  return linkTo ? <Link to={linkTo} style={{ textDecoration: 'none', color: 'inherit' }}>{content}</Link> : content;
 }

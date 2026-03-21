@@ -7,17 +7,17 @@ export default function Footer() {
       {/* Newsletter */}
       <div className="footer__newsletter">
         <div className="container">
-          <h2 className="headline-md">Join the Vivenza Circle</h2>
+          <h2 className="headline-md">Únete al Círculo Vivenza</h2>
           <p className="body-md" style={{ maxWidth: '480px', margin: '1rem auto 2rem' }}>
-            Subscribe for exclusive updates on new collections and interior design inspiration.
+            Suscríbete para recibir actualizaciones exclusivas sobre nuevas colecciones e inspiración de diseño interior.
           </p>
           <form className="footer__form" onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"
-              placeholder="Your email address"
+              placeholder="Tu correo electrónico"
               className="footer__input"
             />
-            <button type="submit" className="btn-primary">Subscribe</button>
+            <button type="submit" className="btn-primary">Suscribirse</button>
           </form>
         </div>
       </div>
@@ -30,29 +30,29 @@ export default function Footer() {
             <div className="footer__brand">
               <Link to="/" className="footer__logo">Vivenza</Link>
               <p className="body-md">
-                Elevating contemporary living through curated design and masterful craftsmanship.
+                Elevando el living contemporáneo a través de diseño curado y maestría artesanal.
               </p>
             </div>
 
             {/* Navigation */}
             <div className="footer__col">
-              <h4 className="label-md">Navigation</h4>
+              <h4 className="label-md">Navegación</h4>
               <ul className="footer__list">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/living-room">Living Room</Link></li>
-                <li><Link to="/bedroom">Bedroom</Link></li>
-                <li><Link to="/dining">Dining</Link></li>
-                <li><Link to="/collections">Collections</Link></li>
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/living-room">Salas</Link></li>
+                <li><Link to="/bedroom">Dormitorios</Link></li>
+                <li><Link to="/dining">Comedores</Link></li>
+                <li><Link to="/collections">Colecciones</Link></li>
               </ul>
             </div>
 
             {/* Company */}
             <div className="footer__col">
-              <h4 className="label-md">Company</h4>
+              <h4 className="label-md">Empresa</h4>
               <ul className="footer__list">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Sustainability</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Sostenibilidad</a></li>
+                <li><a href="#">Contacto</a></li>
               </ul>
             </div>
 
@@ -60,15 +60,15 @@ export default function Footer() {
             <div className="footer__col">
               <h4 className="label-md">Legal</h4>
               <ul className="footer__list">
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Términos de Servicio</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
               </ul>
             </div>
           </div>
 
           {/* Bottom */}
           <div className="footer__bottom">
-            <p className="label-sm">© 2024 Vivenza Luxury Interiors. All rights reserved.</p>
+            <p className="label-sm">© 2024 Vivenza Interiores de Lujo. Todos los derechos reservados.</p>
             <div className="footer__socials">
               <a href="#" aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
