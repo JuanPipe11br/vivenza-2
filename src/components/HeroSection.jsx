@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import './HeroSection.css';
 
 export default function HeroSection({ image, title, subtitle, ctaText, ctaLink, overlay = true }) {
